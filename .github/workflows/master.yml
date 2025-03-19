@@ -1,0 +1,17 @@
+name: My First GitHub Action
+
+on:
+  push:
+    branches:
+      - main  # This triggers the workflow on push to the 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # The job runs on the latest Ubuntu
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2  # This step checks out the repository code
+
+      - name: Run a script
+        run: echo "Hello, GitHub Actions!"  # This step just prints a message
